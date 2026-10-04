@@ -20,9 +20,7 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ADMIN_REGISTER_KEY = os.environ.get(
-    "ADMIN_REGISTER_KEY"
-)
+
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 # Quick-start development settings - unsuitable for production
@@ -32,7 +30,7 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 SECRET_KEY = 'django-insecure-*w&!$iuv$oa)wvrsl&i1#9%%xz#4_m40ef7ml8ck8!cz0bl=pn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = [
     "localhost",
