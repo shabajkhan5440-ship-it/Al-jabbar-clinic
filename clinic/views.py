@@ -242,41 +242,8 @@ def change_admin_password(request):
         "change_password.html"
     )
 
-@staff_member_required
-def appointment_dashboard(request):
-
-    appointments = Appointment.objects.all().order_by("-created_at")
-
-    return render(
-        request,
-        "dashboard.html",
-        {
-            "appointments": appointments
-        }
-    )
-
-@staff_member_required
-def confirm_appointment(request, id):
-
-    appointment = get_object_or_404(
-        Appointment,
-        id=id
-    )
-
-    appointment.status = "Confirmed"
-    appointment.save()
-
-    return redirect("appointment_dashboard")
 
 
-@staff_member_required
-def delete_appointment(request, id):
 
-    appointment = get_object_or_404(
-        Appointment,
-        id=id
-    )
 
-    appointment.delete()
 
-    return redirect("appointment_dashboard")
