@@ -787,3 +787,72 @@ body {
     }
 
 }
+.appointment-success {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: #ecfff4;
+    border: 1px solid #27ae60;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    animation: successAnimation 0.5s ease;
+}
+
+.success-check {
+    min-width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #27ae60;
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.success-content h2 {
+    margin: 0;
+    color: #218c4b;
+    font-size: 22px;
+}
+
+.success-content p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+.appointment-success button {
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+
+    font-size: 25px;
+    color: #777;
+
+    cursor: pointer;
+}
+
+@keyframes successAnimation {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
