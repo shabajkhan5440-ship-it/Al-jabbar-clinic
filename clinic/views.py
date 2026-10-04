@@ -43,8 +43,12 @@ def book_appointment(request):
             message=message,
             status="Pending"
         )
+        messages.success(
+            request,
+            "Appointment Successfully Booked!"
+        )
 
-        return redirect("appointment_dashboard")
+        return redirect("book_appointment")
 
     return render(request, "Appointment.html")
 
