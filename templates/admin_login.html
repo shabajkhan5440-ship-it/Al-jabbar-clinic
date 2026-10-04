@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Admin Login</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/admin-auth.css' %}">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <div class="logo">
+            MEDICARE
+        </div>
+
+        <h1>Admin Login</h1>
+
+        <p class="subtitle">
+            Login to manage clinic appointments
+        </p>
+
+        {% if error %}
+            <div class="error-message">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+                <div class="success-message">
+                    {{ message }}
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <div class="auth-links">
+
+            <a href="{% url 'admin_register' %}">
+                Create Admin Account
+            </a>
+
+            <a href="{% url 'password_reset' %}">
+                Forgot Password?
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

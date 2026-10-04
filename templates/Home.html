@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AL-Jabbar Clinic | Your Health, Our Priority</title>
+
+    <meta
+        name="description"
+        content="AL-Jabbar Clinic - Modern healthcare, diagnostic tests and expert medical care."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+   <link href="{% static 'css/Home.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar" id="navbar">
+
+    <div class="container nav-wrapper">
+
+        <a href="" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div class="logo-text">
+                <strong>AL-Jabbar</strong>
+                <span>CLINIC</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#home" class="active">Home</a>
+            <a href="#tests">Tests</a>
+            <a href="#packages">Packages</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+
+            {% if user.is_authenticated and user.is_staff %}
+            <a href="/Dashboard/">Dashboard</a>
+            {% endif %}
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <a href="#enquiry" class="enquiry-btn">
+                Enquiry
+            </a>
+
+            <a href="/Appointment/" class="appointment-btn">
+                <i class="fa-regular fa-calendar-check"></i>
+                Book Appointment
+            </a>
+
+        </div>
+
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-shape shape-one"></div>
+    <div class="hero-shape shape-two"></div>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                <span></span>
+                YOUR HEALTH, OUR PRIORITY
+            </div>
+
+            <h1>
+                Better Health
+                <br>
+                <span>Starts With Care.</span>
+            </h1>
+
+            <p>
+                Welcome to AL-Jabbar Clinic. Get trusted healthcare,
+                diagnostic tests and expert medical care under one roof.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#appointment" class="primary-btn">
+                    Book Appointment
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#tests" class="secondary-btn">
+                    View Tests
+                </a>
+
+            </div>
+
+
+            <div class="hero-trust">
+
+                <div class="trust-item">
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <div>
+                        <strong>Trusted Care</strong>
+                        <span>Professional Service</span>
+                    </div>
+                </div>
+
+
+                <div class="trust-item">
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                    <div>
+                        <strong>Expert Doctors</strong>
+                        <span>Experienced Team</span>
+                    </div>
+                </div>
+
+
+                <div class="trust-item">
+                    <i class="fa-solid fa-clock"></i>
+
+                    <div>
+                        <strong>Quick Reports</strong>
+                        <span>Fast Diagnostics</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image-wrapper">
+
+            <div class="hero-image-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85"
+                    alt="Doctor at AL-Jabbar Clinic"
+                >
+
+                <div class="doctor-floating-card">
+
+                    <div class="floating-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+
+                    <div>
+                        <strong>Expert Medical Care</strong>
+                        <span>For You & Your Family</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <strong>10+</strong>
+                <span>Years of<br>Healthcare</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     QUICK STATS
+========================================= -->
+
+<section class="stats-section">
+
+    <div class="container stats-grid">
+
+        <div class="stat-box">
+            <i class="fa-solid fa-users"></i>
+
+            <div>
+                <strong class="counter">5000</strong><b>+</b>
+                <span>Happy Patients</span>
+            </div>
+        </div>
+
+
+        <div class="stat-box">
+            <i class="fa-solid fa-flask-vial"></i>
+
+            <div>
+                <strong class="counter">50</strong><b>+</b>
+                <span>Tests Available</span>
+            </div>
+        </div>
+
+
+        <div class="stat-box">
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <div>
+                <strong class="counter">20</strong><b>+</b>
+                <span>Medical Experts</span>
+            </div>
+        </div>
+
+
+        <div class="stat-box">
+            <i class="fa-solid fa-star"></i>
+
+            <div>
+                <strong>98%</strong>
+                <span>Patient Satisfaction</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TEST SECTION
+========================================= -->
+
+<section class="tests-section section" id="tests">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="small-heading">
+                    DIAGNOSTIC SERVICES
+                </span>
+
+                <h2>
+                    Tests & Health
+                    <span>Checkups</span>
+                </h2>
+            </div>
+
+            <p>
+                Choose from our commonly requested diagnostic tests.
+                Get accurate reports with professional care.
+            </p>
+
+        </div>
+
+
+        <div class="test-grid">
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>CBC Test</h3>
+                    <p>Complete Blood Count</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹300</strong>
+                </div>
+
+                <a href="/Appointment/">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Blood Sugar</h3>
+                    <p>Glucose Test</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹150</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-vial"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>HbA1c</h3>
+                    <p>Diabetes Monitoring</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹400</strong>
+                </div>
+
+                <a href="/Aappointment/">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Lipid Profile</h3>
+                    <p>Cholesterol Test</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹600</strong>
+                </div>
+
+                <a href="/Appointment/">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-liver"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Liver Function</h3>
+                    <p>LFT Test</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹700</strong>
+                </div>
+
+                <a href="/Appointment/">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-kidneys"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Kidney Function</h3>
+                    <p>KFT Test</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹700</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-capsules"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Thyroid Profile</h3>
+                    <p>Thyroid Function Test</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹500</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Vitamin D</h3>
+                    <p>Vitamin D3 Test</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹900</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-prescription-bottle"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Vitamin B12</h3>
+                    <p>B12 Deficiency Test</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹800</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-toilet"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Urine Routine</h3>
+                    <p>Urine Examination</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹200</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>ECG</h3>
+                    <p>Heart Examination</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹400</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="test-icon">
+                    <i class="fa-solid fa-wave-square"></i>
+                </div>
+
+                <div class="test-info">
+                    <h3>Ultrasound</h3>
+                    <p>Diagnostic Imaging</p>
+                </div>
+
+                <div class="test-price">
+                    <small>Starting</small>
+                    <strong>₹1,200</strong>
+                </div>
+
+                <a href="#appointment">
+                    Book Test
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="center-button">
+
+            <a href="/Views/" class="outline-btn">
+                View All Tests
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CATEGORIES
+========================================= -->
+
+<section class="categories-section section">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <span class="small-heading">
+                FIND YOUR TEST
+            </span>
+
+            <h2>
+                What Test Are You
+                <span>Looking For?</span>
+            </h2>
+
+            <p>
+                Explore our diagnostic categories and choose the test
+                that matches your healthcare requirement.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+            <a href="#tests" class="category-card">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Blood Tests</span>
+                <small>View Tests →</small>
+            </a>
+
+            <a href="#tests" class="category-card">
+                <i class="fa-solid fa-syringe"></i>
+                <span>Diabetes Tests</span>
+                <small>View Tests →</small>
+            </a>
+
+            <a href="#tests" class="category-card">
+                <i class="fa-solid fa-dna"></i>
+                <span>Thyroid Tests</span>
+                <small>View Tests →</small>
+            </a>
+
+            <a href="#tests" class="category-card">
+                <i class="fa-solid fa-kidneys"></i>
+                <span>Kidney Tests</span>
+                <small>View Tests →</small>
+            </a>
+
+            <a href="#tests" class="category-card">
+                <i class="fa-solid fa-capsules"></i>
+                <span>Vitamin Tests</span>
+                <small>View Tests →</small>
+            </a>
+
+            <a href="#tests" class="category-card">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>Heart Tests</span>
+                <small>View Tests →</small>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PACKAGES
+========================================= -->
+
+<section class="packages-section section" id="packages">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="small-heading">
+                    HEALTH PACKAGES
+                </span>
+
+                <h2>
+                    Complete Health
+                    <span>Packages</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Save more with our specially designed health
+                checkup packages.
+            </p>
+
+        </div>
+
+
+        <div class="package-grid">
+
+
+            <div class="package-card">
+
+                <div class="package-top">
+
+                    <span>POPULAR</span>
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+                <h3>Basic Health Checkup</h3>
+
+                <p>
+                    Essential tests for your routine health monitoring.
+                </p>
+
+                <div class="package-price">
+                    ₹999
+                    <del>₹1,300</del>
+                </div>
+
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> CBC</li>
+                    <li><i class="fa-solid fa-check"></i> Blood Sugar</li>
+                    <li><i class="fa-solid fa-check"></i> Lipid Profile</li>
+                    <li><i class="fa-solid fa-check"></i> Urine Routine</li>
+                </ul>
+
+                <a href="#appointment">
+                    Book Package
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="package-card featured">
+
+                <div class="package-top">
+
+                    <span>BEST VALUE</span>
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                </div>
+
+                <h3>Full Body Checkup</h3>
+
+                <p>
+                    A comprehensive health package for complete screening.
+                </p>
+
+                <div class="package-price">
+                    ₹2,499
+                    <del>₹3,500</del>
+                </div>
+
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> CBC</li>
+                    <li><i class="fa-solid fa-check"></i> Liver Function</li>
+                    <li><i class="fa-solid fa-check"></i> Kidney Function</li>
+                    <li><i class="fa-solid fa-check"></i> Thyroid Profile</li>
+                    <li><i class="fa-solid fa-check"></i> Lipid Profile</li>
+                </ul>
+
+                <a href="#appointment">
+                    Book Package
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="package-card">
+
+                <div class="package-top">
+
+                    <span>DIABETES</span>
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>Diabetes Care Package</h3>
+
+                <p>
+                    Important tests for regular diabetes monitoring.
+                </p>
+
+                <div class="package-price">
+                    ₹899
+                    <del>₹1,200</del>
+                </div>
+
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Blood Sugar</li>
+                    <li><i class="fa-solid fa-check"></i> HbA1c</li>
+                    <li><i class="fa-solid fa-check"></i> Lipid Profile</li>
+                    <li><i class="fa-solid fa-check"></i> Urine Routine</li>
+                </ul>
+
+                <a href="#appointment">
+                    Book Package
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section class="about-section section" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=85"
+                alt="AL-Jabbar Clinic"
+            >
+
+            <div class="about-badge">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+                <div>
+                    <strong>Trusted</strong>
+                    <span>Healthcare</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="small-heading">
+                ABOUT AL-JABBAR CLINIC
+            </span>
+
+            <h2>
+                Healthcare You Can
+                <span>Trust.</span>
+            </h2>
+
+            <p>
+                AL-Jabbar Clinic is committed to providing reliable,
+                professional and patient-focused healthcare services.
+            </p>
+
+            <p>
+                From routine diagnostic tests to specialist consultations,
+                our goal is to make quality healthcare simple and accessible.
+            </p>
+
+
+            <div class="about-points">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Modern Diagnostic Facilities</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Experienced Medical Professionals</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Patient-Friendly Environment</span>
+                </div>
+
+            </div>
+
+
+            <a href="#appointment" class="primary-btn">
+                Talk To Our Team
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     DOCTORS
+========================================= -->
+
+<section class="doctors-section section" id="doctors">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <span class="small-heading">
+                OUR MEDICAL TEAM
+            </span>
+
+            <h2>
+                Meet Our
+                <span>Doctors</span>
+            </h2>
+
+            <p>
+                Experienced professionals focused on your health.
+            </p>
+
+        </div>
+
+
+        <div class="doctor-grid">
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=85"
+                        alt="Doctor"
+                    >
+
+                    <div class="doctor-social">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="doctor-info">
+                    <h3>Dr. Ahmed Khan</h3>
+                    <p>General Physician</p>
+
+                    <a href="#appointment">
+                        Book Appointment →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=85"
+                        alt="Doctor"
+                    >
+
+                    <div class="doctor-social">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="doctor-info">
+                    <h3>Dr. Sara Ahmed</h3>
+                    <p>Internal Medicine</p>
+
+                    <a href="#appointment">
+                        Book Appointment →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=85"
+                        alt="Doctor"
+                    >
+
+                    <div class="doctor-social">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="doctor-info">
+                    <h3>Dr. Omar Ali</h3>
+                    <p>Diagnostic Specialist</p>
+
+                    <a href="#appointment">
+                        Book Appointment →
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     APPOINTMENT
+========================================= -->
+
+<section class="appointment-section section" id="appointment">
+
+    <div class="container appointment-grid">
+
+        <div class="appointment-info">
+
+            <span class="small-heading">
+                APPOINTMENT
+            </span>
+
+            <h2>
+                Book Your
+                <span>Appointment</span>
+            </h2>
+
+            <p>
+                Select your preferred service and our team will
+                contact you to confirm your appointment.
+            </p>
+
+
+            <div class="appointment-contact">
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+                        <small>Call Us</small>
+                        <strong>+91 98765 43210</strong>
+                    </div>
+                </div>
+
+
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <div>
+                        <small>WhatsApp</small>
+                        <strong>Chat With Us</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <form class="appointment-form" onsubmit="showToast('Appointment request submitted successfully!'); return false;">
+
+            {% csrf_token %}
+
+            <div class="form-row">
+
+                <div class="input-group">
+                    <label>Patient Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" placeholder="Enter mobile number" required>
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="input-group">
+
+                    <label>Select Service</label>
+
+                    <select required>
+
+                        <option value="">Choose Service</option>
+                        <option>CBC Test</option>
+                        <option>Blood Sugar</option>
+                        <option>HbA1c</option>
+                        <option>Lipid Profile</option>
+                        <option>Liver Function Test</option>
+                        <option>Kidney Function Test</option>
+                        <option>Thyroid Profile</option>
+                        <option>Vitamin D</option>
+                        <option>Vitamin B12</option>
+                        <option>ECG</option>
+                        <option>Ultrasound</option>
+                        <option>Doctor Consultation</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Preferred Date</label>
+
+                    <input
+                        type="date"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Message</label>
+
+                <textarea
+                    rows="4"
+                    placeholder="Tell us what you need..."
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="primary-btn full-btn">
+
+                Confirm Appointment
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ENQUIRY
+========================================= -->
+
+<section class="enquiry-section section" id="enquiry">
+
+    <div class="container enquiry-grid">
+
+        <div class="enquiry-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1638202993928-7d113d8c8f13?auto=format&fit=crop&w=1000&q=85"
+                alt="Healthcare consultation"
+            >
+
+        </div>
+
+
+        <div class="enquiry-content">
+
+            <span class="small-heading">
+                HAVE A QUESTION?
+            </span>
+
+            <h2>
+                Send Us An
+                <span>Enquiry</span>
+            </h2>
+
+            <p>
+                Not sure which test you need?
+                Need information about pricing or appointments?
+                Send us your question.
+            </p>
+
+
+            <form
+                class="enquiry-form"
+                onsubmit="showToast('Your enquiry has been sent!'); return false;"
+            >
+
+                {% csrf_token %}
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    placeholder="Mobile Number"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                >
+
+                <select required>
+
+                    <option value="">
+                        Select Enquiry Type
+                    </option>
+
+                    <option>
+                        Test Information
+                    </option>
+
+                    <option>
+                        Test Price
+                    </option>
+
+                    <option>
+                        Appointment
+                    </option>
+
+                    <option>
+                        Doctor Consultation
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+
+                <textarea
+                    rows="4"
+                    placeholder="Write your enquiry..."
+                    required
+                ></textarea>
+
+
+                <button type="submit" class="primary-btn">
+
+                    Send Enquiry
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FAQ
+========================================= -->
+
+<section class="faq-section section" id="faq">
+
+    <div class="container faq-grid">
+
+        <div class="faq-left">
+
+            <span class="small-heading">
+                FREQUENTLY ASKED QUESTIONS
+            </span>
+
+            <h2>
+                Frequently Asked
+                <span>Questions</span>
+            </h2>
+
+            <p>
+                Find answers to common questions about tests,
+                appointments and our healthcare services.
+            </p>
+
+            <a href="#enquiry" class="outline-btn">
+                Ask A Question
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="faq-list">
+
+
+            <div class="faq-item active">
+
+                <button class="faq-question">
+
+                    <span>
+                        Which tests are available at the clinic?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We provide a wide range of diagnostic services
+                        including blood tests, diabetes tests, thyroid
+                        tests, vitamin tests, ECG and ultrasound.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        Do I need an appointment for a test?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        You can contact our clinic to check availability
+                        and book an appointment before visiting.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        How can I book an appointment?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Use the Book Appointment form on this website
+                        or contact our clinic directly.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        How can I ask about test prices?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        You can check the test section on the homepage
+                        or send an enquiry to our team.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        Is home sample collection available?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Contact our clinic team to confirm availability
+                        for your location.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta-section">
+
+    <div class="container cta-content">
+
+        <div>
+
+            <span>
+                YOUR HEALTH MATTERS
+            </span>
+
+            <h2>
+                Take The First Step
+                Towards Better Health.
+            </h2>
+
+        </div>
+
+
+        <div class="cta-buttons">
+
+            <a href="#appointment" class="white-btn">
+                Book Appointment
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#enquiry" class="transparent-btn">
+                Send Enquiry
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer id="contact">
+
+    <div class="container footer-grid">
+
+        <div class="footer-about">
+
+            <a href="#home" class="logo footer-logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <div class="logo-text">
+                    <strong>AL-Jabbar</strong>
+                    <span>CLINIC</span>
+                </div>
+
+            </a>
+
+            <p>
+                Trusted healthcare and diagnostic services
+                for you and your family.
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#tests">Tests</a>
+            <a href="#packages">Packages</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#about">About</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Services</h3>
+
+            <a href="#tests">Blood Tests</a>
+            <a href="#tests">Diabetes Tests</a>
+            <a href="#tests">Thyroid Tests</a>
+            <a href="#tests">ECG</a>
+            <a href="#tests">Ultrasound</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Your Clinic Address, Mumbai
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@aljabbarclinic.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 AL-Jabbar Clinic. All Rights Reserved.
+        </p>
+
+        <p>
+            Designed with Care ❤️
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Toast -->
+<div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage"></span>
+</div>
+
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- JS -->
+<script src="{% static 'js/Home.js' %}"></script>
+
+</body>
+</html>

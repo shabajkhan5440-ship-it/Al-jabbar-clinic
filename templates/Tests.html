@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medical Tests | Clinic</title>
+
+    <link rel="stylesheet" href="{% static 'css/Tests.css' %}">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+<header class="navbar" id="navbar">
+
+    <div class="container nav-wrapper">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div class="logo-text">
+                <strong>AL-Jabbar</strong>
+                <span>CLINIC</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#home" class="active">Home</a>
+            <a href="#tests">Tests</a>
+            <a href="#packages">Packages</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <a href="#enquiry" class="enquiry-btn">
+                Enquiry
+            </a>
+
+            <a href="/Appointment/" class="appointment-btn">
+                <i class="fa-regular fa-calendar-check"></i>
+                Book Appointment
+            </a>
+
+        </div>
+
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="tests-hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">ADVANCED DIAGNOSTICS</span>
+
+        <h1>
+            Medical Tests &
+            <span>Diagnostics</span>
+        </h1>
+
+        <p>
+            Get accurate and reliable diagnostic tests
+            with modern medical equipment and experienced professionals.
+        </p>
+
+        <a href="#tests" class="hero-btn">
+            Explore Tests
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TESTS ================= -->
+
+<section class="tests-section" id="tests">
+
+    <div class="section-heading">
+
+        <span>OUR SERVICES</span>
+
+        <h2>
+            Diagnostic Tests
+        </h2>
+
+        <p>
+            Choose your required test and book your appointment instantly.
+        </p>
+
+    </div>
+
+
+    <div class="tests-grid">
+
+
+        <!-- TEST 1 -->
+
+        <div class="test-card">
+
+            <div class="test-icon">
+                🩻
+            </div>
+
+            <div class="test-content">
+
+                <span class="test-category">
+                    IMAGING
+                </span>
+
+                <h3>
+                    Ultrasound
+                </h3>
+
+                <p>
+                    High-quality ultrasound examination
+                    performed by trained professionals.
+                </p>
+
+                <div class="test-info">
+
+                    <span>
+                        Report: Same Day
+                    </span>
+
+                    <strong>
+                        ₹1500
+                    </strong>
+
+                </div>
+
+                <div class="test-buttons">
+
+                    <a
+                        href="{% url 'Appointment' %}?test=Ultrasound&price=1500"
+                        class="book-btn"
+                    >
+                        Book Appointment
+                    </a>
+
+                    <a
+                        href="mailto:clinic@example.com?subject=Enquiry%20for%20Ultrasound"
+                        class="enquiry-btn"
+                    >
+                        Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEST 2 -->
+
+        <div class="test-card">
+
+            <div class="test-icon">
+                ❤️
+            </div>
+
+            <div class="test-content">
+
+                <span class="test-category">
+                    CARDIOLOGY
+                </span>
+
+                <h3>
+                    2D Echo
+                </h3>
+
+                <p>
+                    Detailed cardiac imaging to evaluate
+                    heart structure and function.
+                </p>
+
+                <div class="test-info">
+
+                    <span>
+                        Report: Same Day
+                    </span>
+
+                    <strong>
+                        ₹2500
+                    </strong>
+
+                </div>
+
+                <div class="test-buttons">
+
+                    <a
+                        href="{% url 'Appointment' %}?test=2D%20Echo&price=2500"
+                        class="book-btn"
+                    >
+                        Book Appointment
+                    </a>
+
+                    <a
+                        href="mailto:clinic@example.com?subject=Enquiry%20for%202D%20Echo"
+                        class="enquiry-btn"
+                    >
+                        Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEST 3 -->
+
+        <div class="test-card">
+
+            <div class="test-icon">
+                🩻
+            </div>
+
+            <div class="test-content">
+
+                <span class="test-category">
+                    RADIOLOGY
+                </span>
+
+                <h3>
+                    X-Ray
+                </h3>
+
+                <p>
+                    Digital X-ray imaging with fast and
+                    accurate diagnostic results.
+                </p>
+
+                <div class="test-info">
+
+                    <span>
+                        Report: Same Day
+                    </span>
+
+                    <strong>
+                        ₹800
+                    </strong>
+
+                </div>
+
+                <div class="test-buttons">
+
+                    <a
+                        href="{% url 'Appointment' %}?test=X-Ray&price=800"
+                        class="book-btn"
+                    >
+                        Book Appointment
+                    </a>
+
+                    <a
+                        href="mailto:clinic@example.com?subject=Enquiry%20for%20X-Ray"
+                        class="enquiry-btn"
+                    >
+                        Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEST 4 -->
+
+        <div class="test-card">
+
+            <div class="test-icon">
+                🧪
+            </div>
+
+            <div class="test-content">
+
+                <span class="test-category">
+                    PATHOLOGY
+                </span>
+
+                <h3>
+                    Blood Test
+                </h3>
+
+                <p>
+                    Reliable laboratory testing with
+                    accurate and timely reports.
+                </p>
+
+                <div class="test-info">
+
+                    <span>
+                        Report: 24 Hours
+                    </span>
+
+                    <strong>
+                        ₹500
+                    </strong>
+
+                </div>
+
+                <div class="test-buttons">
+
+                    <a
+                        href="{% url 'Appointment' %}?test=Blood%20Test&price=500"
+                        class="book-btn"
+                    >
+                        Book Appointment
+                    </a>
+
+                    <a
+                        href="mailto:clinic@example.com?subject=Enquiry%20for%20Blood%20Test"
+                        class="enquiry-btn"
+                    >
+                        Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEST 5 -->
+
+        <div class="test-card">
+
+            <div class="test-icon">
+                🩺
+            </div>
+
+            <div class="test-content">
+
+                <span class="test-category">
+                    HEALTH
+                </span>
+
+                <h3>
+                    Full Health Checkup
+                </h3>
+
+                <p>
+                    Complete health screening package
+                    for routine health assessment.
+                </p>
+
+                <div class="test-info">
+
+                    <span>
+                        Report: 24 Hours
+                    </span>
+
+                    <strong>
+                        ₹3000
+                    </strong>
+
+                </div>
+
+                <div class="test-buttons">
+
+                    <a
+                        href="{% url 'Appointment' %}?test=Full%20Health%20Checkup&price=3000"
+                        class="book-btn"
+                    >
+                        Book Appointment
+                    </a>
+
+                    <a
+                        href="mailto:clinic@example.com?subject=Enquiry%20for%20Health%20Checkup"
+                        class="enquiry-btn"
+                    >
+                        Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<script src="{% static 'js/tests.js' %}"></script>
+
+</body>
+</html>

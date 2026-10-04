@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background: #ffffff;
+
+    color: #071d2b;
+}
+
+
+/* =========================================
+              TEST SECTION
+========================================= */
+
+.tests-section {
+    width: 100%;
+
+    padding: 35px 22px 80px;
+}
+
+
+.tests-container {
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+                 CARD
+========================================= */
+
+.test-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8e8;
+
+    border-radius: 22px;
+
+    padding: 26px 28px 24px;
+
+    min-height: 168px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.test-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #cbdede;
+
+    box-shadow:
+        0 15px 40px rgba(22, 92, 91, 0.08);
+}
+
+
+/* =========================================
+                 TOP
+========================================= */
+
+.test-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 78px;
+}
+
+
+/* =========================================
+                 ICON
+========================================= */
+
+.test-icon {
+    width: 59px;
+
+    height: 59px;
+
+    min-width: 59px;
+
+    border-radius: 17px;
+
+    background: #edf7f5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    color: #438f88;
+}
+
+
+/* =========================================
+                 DETAILS
+========================================= */
+
+.test-details {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.test-details h3 {
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #071d2b;
+
+    margin-bottom: 6px;
+}
+
+
+.test-details p {
+    font-size: 13px;
+
+    font-weight: 400;
+
+    color: #71808b;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+                 PRICE
+========================================= */
+
+.test-price {
+    text-align: right;
+
+    min-width: 75px;
+}
+
+
+.test-price span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #839099;
+
+    margin-bottom: 2px;
+}
+
+
+.test-price strong {
+    display: block;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #438f88;
+}
+
+
+/* =========================================
+                 LINE
+========================================= */
+
+.test-line {
+    height: 1px;
+
+    background: #edf0f0;
+
+    margin: 17px 0 14px;
+}
+
+
+/* =========================================
+                 ACTIONS
+========================================= */
+
+.test-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.book-test {
+    text-decoration: none;
+
+    color: #287e79;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: 0.3s;
+}
+
+
+.book-test span {
+    font-size: 20px;
+
+    line-height: 10px;
+
+    transition: 0.3s;
+}
+
+
+.book-test:hover {
+    color: #155c58;
+}
+
+
+.book-test:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+              ENQUIRY BUTTON
+========================================= */
+
+.enquiry-btn {
+    text-decoration: none;
+
+    border: 1px solid #438f88;
+
+    color: #438f88;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.enquiry-btn:hover {
+    background: #438f88;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+              RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .tests-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .tests-section {
+        padding: 25px 15px 60px;
+    }
+
+
+    .tests-container {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .test-card {
+        padding: 23px;
+
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .test-top {
+        gap: 12px;
+    }
+
+
+    .test-icon {
+        width: 52px;
+
+        height: 52px;
+
+        min-width: 52px;
+
+        font-size: 21px;
+    }
+
+
+    .test-details h3 {
+        font-size: 15px;
+    }
+
+
+    .test-details p {
+        font-size: 11px;
+    }
+
+
+    .test-price strong {
+        font-size: 17px;
+    }
+
+
+    .enquiry-btn {
+        padding: 7px 11px;
+    }
+
+}

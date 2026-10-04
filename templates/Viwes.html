@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medical Tests</title>
+
+    <link rel="stylesheet" href="{% static 'css/Views.css' %}">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+                    TESTS SECTION
+====================================================== -->
+
+<section class="tests-section">
+
+    <div class="tests-container">
+
+
+        <!-- =================================================
+                         CBC TEST
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    💧
+                </div>
+
+                <div class="test-details">
+
+                    <h3>CBC Test</h3>
+
+                    <p>Complete Blood Count</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹300</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="CBC Test"
+                    data-price="300"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20CBC%20Test"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         BLOOD SUGAR
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    📈
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Blood Sugar</h3>
+
+                    <p>Glucose Test</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹150</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Blood Sugar"
+                    data-price="150"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Blood%20Sugar"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         HBA1C
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    🧪
+                </div>
+
+                <div class="test-details">
+
+                    <h3>HbA1c</h3>
+
+                    <p>Diabetes Monitoring</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹400</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="HbA1c"
+                    data-price="400"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20HbA1c"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         LIPID PROFILE
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    ❤️
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Lipid Profile</h3>
+
+                    <p>Cholesterol Test</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹600</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Lipid Profile"
+                    data-price="600"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Lipid%20Profile"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         LIVER FUNCTION
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    🧫
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Liver Function</h3>
+
+                    <p>LFT Test</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹700</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Liver Function"
+                    data-price="700"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Liver%20Function"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         KIDNEY FUNCTION
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    🫘
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Kidney Function</h3>
+
+                    <p>KFT Test</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹700</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Kidney Function"
+                    data-price="700"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Kidney%20Function"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         THYROID PROFILE
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    🩺
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Thyroid Profile</h3>
+
+                    <p>Thyroid Function Test</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹500</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Thyroid Profile"
+                    data-price="500"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Thyroid%20Profile"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         VITAMIN D
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    ☀
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Vitamin D</h3>
+
+                    <p>Vitamin D3 Test</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹900</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Vitamin D"
+                    data-price="900"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Vitamin%20D"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         VITAMIN B12
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    🧪
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Vitamin B12</h3>
+
+                    <p>B12 Deficiency Test</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹800</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Vitamin B12"
+                    data-price="800"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Vitamin%20B12"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         URINE ROUTINE
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    🧪
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Urine Routine</h3>
+
+                    <p>Urine Examination</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹200</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Urine Routine"
+                    data-price="200"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Urine%20Routine"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         ECG
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    ❤️
+                </div>
+
+                <div class="test-details">
+
+                    <h3>ECG</h3>
+
+                    <p>Heart Examination</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹400</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="ECG"
+                    data-price="400"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20ECG"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                         ULTRASOUND
+        ================================================== -->
+
+        <div class="test-card">
+
+            <div class="test-top">
+
+                <div class="test-icon">
+                    〽
+                </div>
+
+                <div class="test-details">
+
+                    <h3>Ultrasound</h3>
+
+                    <p>Diagnostic Imaging</p>
+
+                </div>
+
+                <div class="test-price">
+
+                    <span>Starting</span>
+
+                    <strong>₹1,200</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-line"></div>
+
+
+            <div class="test-actions">
+
+                <a
+                    href="#"
+                    class="book-test"
+                    data-test="Ultrasound"
+                    data-price="1200"
+                >
+                    Book Test <span>→</span>
+                </a>
+
+                <a
+                    href="mailto:clinic@example.com?subject=Enquiry%20for%20Ultrasound"
+                    class="enquiry-btn"
+                >
+                    Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<script src="{% static 'js/Views.js' %}"></script>
+
+</body>
+</html>

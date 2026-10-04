@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Admin Registration</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/admin-auth.css' %}">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <div class="logo">
+            MEDICARE
+        </div>
+
+        <h1>Create Admin</h1>
+
+        <p class="subtitle">
+            Create your clinic administrator account
+        </p>
+
+
+        {% if error %}
+
+            <div class="error-message">
+                {{ error }}
+            </div>
+
+        {% endif %}
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Create username"
+                required
+            >
+
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Admin email"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Create password"
+                required
+            >
+
+
+            <label>Confirm Password</label>
+
+            <input
+                type="password"
+                name="confirm_password"
+                placeholder="Confirm password"
+                required
+            >
+
+
+            <label>Admin Registration Key</label>
+
+            <input
+                type="password"
+                name="register_key"
+                placeholder="Enter admin key"
+                required
+            >
+
+
+            <button type="submit">
+                Register Admin
+            </button>
+
+        </form>
+
+
+        <div class="auth-links">
+
+            <a href="{% url 'admin_login' %}">
+                Already have an account? Login
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

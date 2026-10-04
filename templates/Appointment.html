@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | Clinic</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/Appointment.css' %}">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            +
+        </div>
+
+        <div>
+            <h2>MEDICARE</h2>
+            <span>CLINIC & DIAGNOSTICS</span>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="/">Home</a>
+
+        <a href="#">Doctors</a>
+
+        <a href="#">Services</a>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+
+    <a href="/Appointment/"
+       class="nav-button">
+
+        Book Appointment
+
+    </a>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            <span></span>
+            PATIENT APPOINTMENT
+        </div>
+
+
+        <h1>
+
+            Your Health,
+            <strong>Our Priority.</strong>
+
+        </h1>
+
+
+        <p>
+
+            Book your appointment with our experienced
+            doctors and get the healthcare you deserve.
+
+        </p>
+
+
+        <div class="hero-features">
+
+            <div>
+                <b>01</b>
+                <span>Expert Doctors</span>
+            </div>
+
+            <div>
+                <b>02</b>
+                <span>Modern Diagnostics</span>
+            </div>
+
+            <div>
+                <b>03</b>
+                <span>Patient Care</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-circle">
+
+        <div class="circle-inner">
+
+            <span>HEALTH</span>
+
+            <strong>+</strong>
+
+            <span>CARE</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking-section"
+         id="booking">
+
+
+    <div class="section-heading">
+
+        <span>APPOINTMENT</span>
+
+        <h2>
+            Book Your Appointment
+        </h2>
+
+        <p>
+            Please provide your details below.
+            Our team will confirm your appointment shortly.
+        </p>
+
+    </div>
+
+
+
+    <div class="booking-container">
+
+
+        <!-- LEFT INFORMATION -->
+
+        <div class="booking-info">
+
+            <div class="medical-icon">
+                +
+            </div>
+
+
+            <h3>
+                Complete your
+                <strong>health journey.</strong>
+            </h3>
+
+
+            <p>
+                Select your doctor, diagnostic test,
+                preferred date and time.
+            </p>
+
+
+            <div class="contact-box">
+
+                <div class="contact-item">
+
+                    <span>PHONE</span>
+
+                    <strong>
+                        +91 98765 43210
+                    </strong>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>EMAIL</span>
+
+                    <strong>
+                        clinic@example.com
+                    </strong>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>WORKING HOURS</span>
+
+                    <strong>
+                        Mon - Sat : 9 AM - 8 PM
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <div class="form-card">
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+
+                <div class="form-title">
+
+                    <span>01 — PATIENT DETAILS</span>
+
+                    <h3>
+                        Appointment Information
+                    </h3>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Patient Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            name="patient_name"
+                            placeholder="Enter patient name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Mobile Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Enter mobile number"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter email address"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Select Doctor *
+                        </label>
+
+                        <select
+                            name="doctor"
+                            required
+                        >
+
+                            <option value="">
+                                Select Doctor
+                            </option>
+
+                            <option value="Dr. Ahmed Khan">
+                                Dr. Ahmed Khan
+                            </option>
+
+                            <option value="Dr. Priya Sharma">
+                                Dr. Priya Sharma
+                            </option>
+
+                            <option value="Dr. Rahul Mehta">
+                                Dr. Rahul Mehta
+                            </option>
+
+                            <option value="Dr. Sana Sheikh">
+                                Dr. Sana Sheikh
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Test / Service *
+                        </label>
+
+                        <select
+                            name="test_name"
+                            id="testSelect"
+                            required
+                        >
+
+                            <option value="">
+                                Select Test
+                            </option>
+
+                            <option
+                                value="Ultrasound"
+                                data-price="1500"
+                            >
+                                Ultrasound — ₹1500
+                            </option>
+
+                            <option
+                                value="2D Echo"
+                                data-price="2500"
+                            >
+                                2D Echo — ₹2500
+                            </option>
+
+                            <option
+                                value="X-Ray"
+                                data-price="800"
+                            >
+                                X-Ray — ₹800
+                            </option>
+
+                            <option
+                                value="Blood Test"
+                                data-price="500"
+                            >
+                                Blood Test — ₹500
+                            </option>
+
+                            <option
+                                value="Health Checkup"
+                                data-price="3000"
+                            >
+                                Health Checkup — ₹3000
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Price
+                        </label>
+
+                        <input
+                            type="text"
+                            id="priceDisplay"
+                            value="₹0"
+                            readonly
+                        >
+
+                        <input
+                            type="hidden"
+                            name="test_price"
+                            id="testPrice"
+                            value="0"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Appointment Date *
+                        </label>
+
+                        <input
+                            type="date"
+                            name="appointment_date"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Appointment Time *
+                        </label>
+
+                        <select
+                            name="appointment_time"
+                            required
+                        >
+
+                            <option value="">
+                                Select Time
+                            </option>
+
+                            <option value="09:00">
+                                09:00 AM
+                            </option>
+
+                            <option value="10:00">
+                                10:00 AM
+                            </option>
+
+                            <option value="11:00">
+                                11:00 AM
+                            </option>
+
+                            <option value="12:00">
+                                12:00 PM
+                            </option>
+
+                            <option value="13:00">
+                                01:00 PM
+                            </option>
+
+                            <option value="14:00">
+                                02:00 PM
+                            </option>
+
+                            <option value="15:00">
+                                03:00 PM
+                            </option>
+
+                            <option value="16:00">
+                                04:00 PM
+                            </option>
+
+                            <option value="17:00">
+                                05:00 PM
+                            </option>
+
+                            <option value="18:00">
+                                06:00 PM
+                            </option>
+
+                            <option value="19:00">
+                                07:00 PM
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            Message / Problem
+                        </label>
+
+                        <textarea
+                            name="message"
+                            rows="4"
+                            placeholder="Write your message..."
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="book-button"
+                >
+
+                    <span>
+                        Confirm Appointment
+                    </span>
+
+                    <b>→</b>
+
+                </button>
+
+
+                <div class="secure-note">
+
+                    🔒 Your information is secure and confidential.
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GSAP ================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+</script>
+
+
+<script>
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+/* HERO */
+
+gsap.from(".hero-content", {
+
+    x: -80,
+
+    opacity: 0,
+
+    duration: 1.2,
+
+    ease: "power3.out"
+
+});
+
+
+gsap.from(".hero-circle", {
+
+    scale: 0.4,
+
+    opacity: 0,
+
+    rotation: 90,
+
+    duration: 1.4,
+
+    ease: "power3.out"
+
+});
+
+
+/* BOOKING */
+
+gsap.from(".booking-info", {
+
+    scrollTrigger: {
+
+        trigger: ".booking-section",
+
+        start: "top 75%"
+
+    },
+
+    x: -70,
+
+    opacity: 0,
+
+    duration: 1
+
+});
+
+
+gsap.from(".form-card", {
+
+    scrollTrigger: {
+
+        trigger: ".booking-section",
+
+        start: "top 75%"
+
+    },
+
+    x: 70,
+
+    opacity: 0,
+
+    duration: 1
+
+});
+
+
+/* PRICE */
+
+const testSelect =
+    document.getElementById("testSelect");
+
+const priceDisplay =
+    document.getElementById("priceDisplay");
+
+const testPrice =
+    document.getElementById("testPrice");
+
+
+testSelect.addEventListener("change", function () {
+
+    const selected =
+        this.options[this.selectedIndex];
+
+    const price =
+        selected.getAttribute("data-price") || 0;
+
+    priceDisplay.value = "₹" + price;
+
+    testPrice.value = price;
+
+});
+
+
+/* BUTTON */
+
+const button =
+    document.querySelector(".book-button");
+
+button.addEventListener("mouseenter", () => {
+
+    gsap.to(button, {
+
+        scale: 1.02,
+
+        duration: 0.25
+
+    });
+
+});
+
+
+button.addEventListener("mouseleave", () => {
+
+    gsap.to(button, {
+
+        scale: 1,
+
+        duration: 0.25
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
