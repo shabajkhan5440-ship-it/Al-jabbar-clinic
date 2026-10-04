@@ -31,7 +31,11 @@ urlpatterns = [
         views.confirm_appointment,
         name="confirm_appointment"
     ),
-
+    path(
+    "appointment-dashboard/",
+    views.appointment_dashboard,
+    name="appointment_dashboard"
+),
     path(
         "tests/",views.Tests,name="Tests"
     ) ,
