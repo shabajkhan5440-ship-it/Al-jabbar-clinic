@@ -217,27 +217,10 @@
 
         </div>
 
-{% if messages %}
-    {% for message in messages %}
-
-        <div class="appointment-success">
-
-            <div class="success-check">
-                ✓
-            </div>
-
-            <div class="success-content">
-                <h2>Appointment Successfully Booked!</h2>
-                <p>
-                    Your appointment has been confirmed successfully.
-                </p>
-            </div>
-
-            <button onclick="this.parentElement.remove()">×</button>
-
-        </div>
-
-    {% endfor %}
+{% if success %}
+<script>
+    alert("✅ Appointment Successfully Booked!");
+</script>
 {% endif %}
 
         <!-- FORM -->
