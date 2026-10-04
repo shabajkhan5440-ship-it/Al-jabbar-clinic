@@ -48,7 +48,7 @@ def book_appointment(request):
             "Appointment Successfully Booked!"
         )
 
-        return redirect("book_appointment")
+        return redirect("home")
 
     return render(request, "Appointment.html")
 
