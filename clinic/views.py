@@ -54,7 +54,7 @@ def book_appointment(request):
 
 
 # Appointment Dashboard
-@staff_member_required
+
 def appointment_dashboard(request):
 
     appointments = Appointment.objects.all().order_by("-created_at")
@@ -69,7 +69,7 @@ def appointment_dashboard(request):
 
 
 # Confirm Appointment
-@staff_member_required
+
 def confirm_appointment(request, id):
 
     appointment = get_object_or_404(
@@ -84,7 +84,7 @@ def confirm_appointment(request, id):
 
 
 # Delete Appointment
-@staff_member_required
+
 def delete_appointment(request, id):
 
     appointment = get_object_or_404(
@@ -183,7 +183,7 @@ def admin_register(request):
         request,
         "admin_register.html"
     )
-@login_required
+
 def change_admin_password(request):
 
     if not request.user.is_staff:
